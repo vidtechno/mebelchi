@@ -1,32 +1,55 @@
-# React + TypeScript + Vite
+# 🛋️ Elegant Mebel — Premium Furniture Website Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+O‘zbekistondagi mebel korxonalari, atelyelari va fabrikalari uchun yaratilgan nufuzli, zamonaviy va yuqori darajada konvertatsiya qiluvchi veb-sayt demo loyihasi.
 
-Currently, two official plugins are available:
+🔗 **GitHub Repository:** [https://github.com/vidtechno/mebelchi](https://github.com/vidtechno/mebelchi)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Loyiha Xususiyatlari
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Zamonaviy arxitekturaviy dizayn:**
+  - Shriftlar: **Outfit** (sarlavhalar) + **Plus Jakarta Sans** (matnlar)
+  - Hashamatli ranglar: qaymoqrang fonlar, qumtosh, ko‘mir/obsidian va boy bronza-oltin aksentlar.
+- **Haqiqiy topshirilgan mebellar fotosuratlari:**
+  - Oshxona mebellari (marmar orolli, Blum tizimlari)
+  - Shkaf va garderoblar (qoraytirilgan bronza shisha, sensorli LED)
+  - Yumshoq mebellar (Bouclé mato, modulli egri dizayn)
+  - Yotoqxona mebellari (fluted akustik panellar, gazlift mexanizmi)
+  - Ofis mebellari (massiv eman va metall)
+- **O‘zbek tilidagi professional matnlar:**
+  - Egger, Blum, Hettich, AGT xalqaro standartlari
+  - 1 mm aniqlikdagi lazerli o‘lchov, 3 yillik rasmiy kafolat
+- **Interaktiv imkoniyatlar:**
+  - Kategoriyalar bo‘yicha filtrlanuvchi portfolio
+  - Loyihaning to‘liq spetsifikatsiyalari va materiallarini ko‘rsatuvchi modal oyna
+  - Onlayn ariza yuborish va narx hisoblash formasi
+  - Mobil menyu va suzuvchi tezkor aloqa tugmasi (Telegram & Qo‘ng‘iroq)
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🛠 Texnologiyalar
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- **React 19** + **TypeScript**
+- **Vite 6**
+- **Tailwind CSS 3**
+- **Lucide Icons**
+
+---
+
+## 🚀 Ishga Tushirish
+
+1. Bog‘liqliklarni o‘rnatish:
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+2. Mahalliy serverni ishga tushirish:
+```bash
+npm run dev
+```
+
+3. Ishlab chiqarish versiyasini yig‘ish (Production build):
+```bash
+npm run build
+```
