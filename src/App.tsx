@@ -1,23 +1,17 @@
 import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Categories } from './components/Categories';
-import { Portfolio } from './components/Portfolio';
-import { MaterialsShowcase } from './components/MaterialsShowcase';
-import { Process } from './components/Process';
-import { Testimonials } from './components/Testimonials';
-import { CtaBanner } from './components/CtaBanner';
+import { Catalog } from './components/Catalog';
+import { PriceCalculator } from './components/PriceCalculator';
+import { TrustPerks } from './components/TrustPerks';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { ProjectModal } from './components/ProjectModal';
-import { CategoryModal } from './components/CategoryModal';
+import { FurnitureModal } from './components/FurnitureModal';
 import { QuickContactFloating } from './components/QuickContactFloating';
-import type { Project, Category } from './types';
+import type { FurnitureItem } from './types/catalog';
 
 export function App() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [selectedFurniture, setSelectedFurniture] = useState<FurnitureItem | null>(null);
 
   const scrollToContact = () => {
     const el = document.getElementById('contact');
@@ -26,15 +20,17 @@ export function App() {
     }
   };
 
-  const handleOpenInquiry = (targetName: string) => {
+  const handleOpenOrder = (itemName: string, priceInfo?: string) => {
     scrollToContact();
     setTimeout(() => {
       const textarea = document.querySelector('textarea') as HTMLTextAreaElement;
       if (textarea) {
-        textarea.value = `Assalomu alaykum, men "${targetName}" bo‘yicha batafsil ma’lumot va narxini bilmoqchi edim.`;
+        textarea.value = `Assalomu alaykum! Men "${itemName}" ${
+          priceInfo ? `(${priceInfo})` : ''
+        } bo‘yicha buyurtma bermoqchiman va bepul o‘lchovga yozilmoqchiman.`;
         textarea.focus();
       }
-    }, 400);
+    }, 450);
   };
 
   return (
@@ -44,39 +40,36 @@ export function App() {
 
       {/* Main Content */}
       <main className="flex-grow">
+        {/* 1. Hero Section */}
         <Hero onOpenContact={scrollToContact} />
-        <About />
-        <Categories
-          onSelectCategory={(cat) => setSelectedCategory(cat)}
-          onOpenContact={scrollToContact}
+
+        {/* 2. Core Centerpiece: Furniture Catalog & Prices */}
+        <Catalog
+          onSelectItem={(item) => setSelectedFurniture(item)}
+          onQuickOrder={(title, price) => handleOpenOrder(title, price)}
         />
-        <Portfolio
-          onSelectProject={(proj) => setSelectedProject(proj)}
-        />
-        <MaterialsShowcase />
-        <Process onOpenContact={scrollToContact} />
-        <Testimonials />
-        <CtaBanner onOpenContact={scrollToContact} />
+
+        {/* 3. Interactive Price Calculator */}
+        <PriceCalculator onOpenOrder={(details) => handleOpenOrder(details)} />
+
+        {/* 4. Compact Trust & European Brand Guarantees */}
+        <TrustPerks />
+
+        {/* 5. Contact & Fast Consultation */}
         <Contact />
       </main>
 
       {/* Footer */}
       <Footer />
 
-      {/* Floating Fast Action */}
+      {/* Fast Floating Buttons */}
       <QuickContactFloating />
 
-      {/* Modals */}
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-        onOpenInquiry={handleOpenInquiry}
-      />
-
-      <CategoryModal
-        category={selectedCategory}
-        onClose={() => setSelectedCategory(null)}
-        onSelectForOrder={handleOpenInquiry}
+      {/* Detailed Furniture Pricing & Specs Modal */}
+      <FurnitureModal
+        item={selectedFurniture}
+        onClose={() => setSelectedFurniture(null)}
+        onSelectForOrder={(title, price) => handleOpenOrder(title, price)}
       />
     </div>
   );

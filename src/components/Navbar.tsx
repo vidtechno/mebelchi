@@ -23,12 +23,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
 
   const navLinks = [
     { label: 'Bosh sahifa', href: '#home' },
-    { label: 'Afzalliklar', href: '#about' },
-    { label: 'Xizmatlar', href: '#categories' },
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Jarayon', href: '#process' },
-    { label: 'Fikrlar', href: '#testimonials' },
-    { label: 'Aloqa', href: '#contact' },
+    { label: 'Katalog & Narxlar', href: '#catalog', highlight: true },
+    { label: 'Kalkulyator', href: '#calculator' },
+    { label: 'Afzalliklar', href: '#perks' },
+    { label: 'Bog‘lanish', href: '#contact' },
   ];
 
   return (
@@ -64,7 +62,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-charcoal/80 hover:text-charcoal hover:bg-cream-200/80 rounded-full transition-all duration-200"
+                  className={`px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-200 ${
+                    link.highlight
+                      ? 'bg-charcoal text-white hover:bg-bronze shadow-xs'
+                      : 'text-charcoal/80 hover:text-charcoal hover:bg-cream-200/80'
+                  }`}
                 >
                   {link.label}
                 </a>

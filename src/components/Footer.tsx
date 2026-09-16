@@ -73,19 +73,16 @@ export const Footer: React.FC = () => {
                 <a href="#home" className="hover:text-white transition-colors">Bosh sahifa</a>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors">Afzalliklarimiz</a>
+                <a href="#catalog" className="hover:text-white text-bronze-light transition-colors font-bold">Katalog & Narxlar</a>
               </li>
               <li>
-                <a href="#categories" className="hover:text-white transition-colors">Xizmatlar</a>
+                <a href="#calculator" className="hover:text-white transition-colors">Narx Kalkulyatori</a>
               </li>
               <li>
-                <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a>
+                <a href="#perks" className="hover:text-white transition-colors">Afzalliklar</a>
               </li>
               <li>
-                <a href="#process" className="hover:text-white transition-colors">Ish jarayoni</a>
-              </li>
-              <li>
-                <a href="#testimonials" className="hover:text-white transition-colors">Mijozlar fikri</a>
+                <a href="#contact" className="hover:text-white transition-colors">Bog‘lanish</a>
               </li>
             </ul>
           </div>
@@ -97,22 +94,22 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-sm text-white/70 font-medium">
               <li>
-                <a href="#categories" className="hover:text-white transition-colors">Oshxona mebellari</a>
+                <a href="#catalog" className="hover:text-white transition-colors">Oshxona mebellari (narxlari)</a>
               </li>
               <li>
-                <a href="#categories" className="hover:text-white transition-colors">Shkaf va garderoblar</a>
+                <a href="#catalog" className="hover:text-white transition-colors">Shkaf va garderoblar</a>
               </li>
               <li>
-                <a href="#categories" className="hover:text-white transition-colors">Yumshoq mebel to‘plamlari</a>
+                <a href="#catalog" className="hover:text-white transition-colors">Yumshoq mebellar va divanlar</a>
               </li>
               <li>
-                <a href="#categories" className="hover:text-white transition-colors">Yotoqxona mebellari</a>
+                <a href="#catalog" className="hover:text-white transition-colors">Yotoqxona to‘plamlari</a>
               </li>
               <li>
-                <a href="#categories" className="hover:text-white transition-colors">Ofis va kabinet mebellari</a>
+                <a href="#catalog" className="hover:text-white transition-colors">Ofis va kabinet mebellari</a>
               </li>
               <li>
-                <a href="#categories" className="hover:text-white transition-colors">Individual loyihalar</a>
+                <a href="#catalog" className="hover:text-white transition-colors">TV-zona va stol-stullar</a>
               </li>
             </ul>
           </div>

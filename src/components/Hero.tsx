@@ -44,30 +44,38 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
               <a
-                href="https://t.me/telegram"
-                target="_blank"
-                rel="noreferrer"
+                href="#catalog"
                 className="inline-flex items-center justify-center space-x-2.5 px-8 py-4 rounded-full bg-charcoal text-white font-bold text-sm tracking-wide shadow-xl hover:bg-bronze hover:shadow-bronze/20 hover:-translate-y-0.5 transition-all duration-300"
               >
-                <Send className="w-4 h-4 text-bronze-light" />
-                <span>Telegram orqali yozish</span>
+                <ArrowDownRight className="w-4 h-4 text-bronze-light" />
+                <span>Katalog & Narxlarni ko‘rish</span>
+              </a>
+
+              <a
+                href="#calculator"
+                className="inline-flex items-center justify-center space-x-2 px-7 py-4 rounded-full bg-white hover:bg-cream-100 text-charcoal font-bold text-sm border-2 border-sand hover:border-bronze transition-all duration-300 shadow-xs"
+              >
+                <Sparkles className="w-4 h-4 text-bronze" />
+                <span>Narxni hisoblash</span>
               </a>
 
               <button
                 type="button"
                 onClick={onOpenContact}
-                className="inline-flex items-center justify-center space-x-2 px-7 py-4 rounded-full bg-white hover:bg-cream-100 text-charcoal font-bold text-sm border-2 border-sand hover:border-bronze transition-all duration-300 shadow-xs"
+                className="inline-flex items-center justify-center space-x-2 px-5 py-4 rounded-full bg-cream-200/80 hover:bg-cream-300 text-charcoal font-bold text-sm transition-colors"
               >
                 <Calendar className="w-4 h-4 text-bronze" />
-                <span>Bepul o‘lchovga yozilish</span>
+                <span>O‘lchovga yozilish</span>
               </button>
 
               <a
-                href="#portfolio"
-                className="inline-flex items-center justify-center space-x-1.5 px-5 py-4 rounded-full bg-cream-200/80 hover:bg-cream-300 text-charcoal font-bold text-sm transition-colors"
+                href="https://t.me/telegram"
+                target="_blank"
+                rel="noreferrer"
+                className="p-4 rounded-full bg-sky-50 hover:bg-sky-500 text-sky-600 hover:text-white transition-colors flex items-center justify-center shadow-xs"
+                title="Telegram"
               >
-                <span>Portfolio</span>
-                <ArrowDownRight className="w-4 h-4 text-bronze" />
+                <Send className="w-4 h-4" />
               </a>
             </div>
 
@@ -79,7 +87,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 </div>
                 <div>
                   <div className="font-heading text-base font-extrabold text-charcoal">450+</div>
-                  <div className="text-xs text-charcoal/70 font-medium">Bajarilgan loyihalar</div>
+                  <div className="text-xs text-charcoal/70 font-medium">Topshirilgan mebel</div>
                 </div>
               </div>
 
@@ -119,19 +127,24 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 />
                 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/25 to-transparent" />
 
                 {/* Bottom Card Overlay Details */}
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <div className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-bronze text-white text-[10px] font-bold uppercase tracking-wider mb-2">
-                    <CheckCircle className="w-3 h-3" />
-                    <span>Real loyiha • 2025</span>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-bronze text-white text-[10px] font-bold uppercase tracking-wider">
+                      <CheckCircle className="w-3 h-3" />
+                      <span>Oshxona • 2025</span>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-bold text-white">
+                      3 800 000 so‘m / m
+                    </div>
                   </div>
                   <h3 className="font-heading text-2xl font-bold leading-tight">
                     Marmar orolli zamonaviy oshxona
                   </h3>
                   <p className="text-xs text-white/80 mt-1 font-medium">
-                    Tashkent City • Egger MDF & Blum furnituralari
+                    Egger Matt MDF & Blum Legrabox tizimlari
                   </p>
                 </div>
               </div>
